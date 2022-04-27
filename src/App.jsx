@@ -9,7 +9,16 @@ function App() {
     const email = e.target.email.value;
     console.log(name);
     console.log(email);
+    if(name && email){
     Swal.fire("Good job!", "Your Details have been submited", "success");
+    }
+    else{
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'please fill the required details!',
+      })
+    }
   };
 
   return (
